@@ -173,7 +173,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(glow_orange, '{03}: King Rank                8K'))
             print(Colorate.Horizontal(glow_orange, '{04}: Change ID                4.5K'))
             print(Colorate.Horizontal(glow_orange, '{05}: Change Name              100'))
-            print(Colorate.Horizontal(glow_orange '{06}: Change Name (Rainbow)    100'))
+            print(Colorate.Horizontal(glow_orange, '{06}: Change Name (Rainbow)    100'))
             print(Colorate.Horizontal(glow_orange, '{07}: Number Plates            2K'))
             print(Colorate.Horizontal(glow_orange, '{08}: Account Delete           FREE'))
             print(Colorate.Horizontal(glow_orange, '{09}: Account Register         FREE'))
