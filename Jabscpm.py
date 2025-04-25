@@ -253,13 +253,14 @@ class Jabshshs:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def custom_car_mileage(self, car_id, custom):
+    def brake_car(self, car_id, custom):
         payload = {
         "account_auth": self.auth_token,
         "car_id": car_id,
         "custom": custom,
         }
         params = {"key": self.access_key}
-        response = requests.post(f"{BASE_URL}/millage_car", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/brake_car", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+        
