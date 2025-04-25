@@ -75,7 +75,7 @@ def load_player_data(cpm):
             print(Colorate.Horizontal(Colors.red_to_yellow, f'Coins  : {data.get("coin")}.'))
             
             friends_count = len(data.get("FriendsID", []))
-            console.print(f"[bold white]   >> Friends     : {friends_count}[/bold white]")
+            print(Colorate.Horizontal(Colors.red_to_yellow, f'Friends : {friends_count}'))
             
         else:
             print(Colorate.Horizontal(Colors.red_to_yellow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
