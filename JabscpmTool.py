@@ -39,10 +39,10 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name =  "                  _  _   ___ ___  ___ ___ __  __  \n"
-    brand_name += "               _ | |/_\ | _ ) __|/ __| _ \  \/  | \n"
-    brand_name += "              | || / _ \| _ \__ \ (__|  _/ |\/| | \n"
-    brand_name += "               \__/_/ \_\___/___/\___|_| |_|  |_| \n"
+    brand_name =  "                   _  _   ___ ___  ___ ___ __  __  \n"
+    brand_name += "                _ | |/_\ | _ ) __|/ __| _ \  \/  | \n"
+    brand_name += "               | || / _ \| _ \__ \ (__|  _/ |\/| | \n"
+    brand_name += "                \__/_/ \_\___/___/\___|_| |_|  |_| \n"
     colors = [
         "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", 
         "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)",
