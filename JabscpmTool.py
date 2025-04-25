@@ -669,7 +669,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 31: # Brake
+            elif service == 30: # Brake
                 console.print("[bold]ENTER CAR DETAILS![/bold]")
                 car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
                 console.print("[bold]ENTER NEW BRAKE![/bold]")
