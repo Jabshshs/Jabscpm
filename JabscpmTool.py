@@ -168,7 +168,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32']
             print(Colorate.Horizontal(Colors.red_to_yellow, '{01}: Increase Money           1.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{02}: Increase Coins           4.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{03}: King Rank                8K'))
@@ -200,6 +200,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '{29}: Custom Tire burner       1.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{30}: Custom Car Brake         2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{31}: Custom Car Millage       2K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '{32}: Remove Rear Bumper       2.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -693,6 +694,20 @@ if __name__ == "__main__":
                 custom = IntPrompt.ask("[bold blue][?]﻿ENTER MILLAGE U WANT[/bold blue]")                
                 console.print("[bold red][%] Setting Percentage [/bold red]: ", end=None)
                 if cpm.millage_car(car_id, custom):
+                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
+                    else: continue
+                else:
+                    console.print("[bold red]FAILED[/bold red]")
+                    console.print("[bold red]Please Try Again[/bold red]")
+                    sleep(2)
+                    continue
+            elif service == 32: # Bumper rear
+                console.print("[bold]ENTER CAR DETAILS![/bold]")
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")                
+                console.print("[bold red][%] Removing Rear Bumper [/bold red]: ", end=None)
+                if cpm.rear_bumper(car_id):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
